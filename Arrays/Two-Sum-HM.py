@@ -10,20 +10,20 @@
 # Time Complexity: O(n)   (one pass through array, O(1) lookups)
 # Space Complexity: O(n)  (store seen numbers in dictionary)
 
-class Solution:
-    def Two_Sum_HM(self,nums:list[int],target:int)->list[int]:
+class Solution_HM:
+    def Two_Sum_HM(self,numbers:list[int],targetNum:int)->list[int]:
         Val_Map={} # HashMap to store number → index
-        for i, n in enumerate(nums):
-            Sub_Val=target-n
+        for i, num in enumerate(numbers):
+            Sub_Val=targetNum-num
             # Step 1: Check if complement is already seen
             if Sub_Val in Val_Map: # Check whether the subtracted value is in the Hash Map
                 return [Val_Map[Sub_Val],i] 
             # Step 2: Otherwise, store this number
-            Val_Map[n]=i
+            Val_Map[num]=i
         return None # If no solution (though problem says one always exists)
 
-nums=[2,7,11,15]
-target=17
-soln=Solution()
-res=soln.Two_Sum_HM(nums,target)
-print("The 2 indices' value that gives the target value are: ",res)   
+numbers=[2,7,11,15]
+targetNum=17
+soln_HM=Solution_HM()
+result=soln_HM.Two_Sum_HM(numbers,targetNum)
+print("The 2 indices' value that gives the target value are: ",result)   
