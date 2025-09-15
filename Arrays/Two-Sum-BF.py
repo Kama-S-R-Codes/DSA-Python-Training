@@ -1,3 +1,12 @@
+# Problem: Two Sum 
+# Problem: Given an array of numbers, return indices of the two numbers that add up to a target.
+# Approach 1: Brute Force:
+    # Checking every pair of numbers
+    # Check if their sum == target
+# Test Cases: [2,7,11,15]
+# Time Complexity: O(n^2)
+# Space Complexity: O(1)
+# Teaching Note: Starting point before introducing optimized approach of HashMap
 class Solution:
     def Twosum(self,nums:list[int], target:int)->list[int]:
         for i in range(len(nums)):
@@ -7,6 +16,6 @@ class Solution:
         return()
 nums=[2,7,11,15]
 target=9
-solution=Solution()
-result=solution.Twosum(nums,target)
-print(result)
+solution=Solution() #Object Creation
+result=solution.Twosum(nums,target) #Call the function using the object
+print("The indices are: ",result)

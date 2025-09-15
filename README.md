@@ -1,4 +1,4 @@
-# My DSA Python Journey 🐍✨
+## My DSA Python Journey 🐍✨
 
 Welcome to my Data Structures and Algorithms (DSA) with Python repository.
 
